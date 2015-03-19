@@ -28,7 +28,6 @@ SOMC_PLATFORM := MSM8226
 HTC_ROOT:=device/htc/a11/rootdir
 
 PRODUCT_COPY_FILES += \
-
     $(HTC_ROOT)/init.environ.rc:root/init.environ.rc \
     $(HTC_ROOT)/init.power.rc:root/init.power.rc \
     $(HTC_ROOT)/init.project.rc:root/init.project.rc \
@@ -106,7 +105,24 @@ PRODUCT_COPY_FILES += \
     $(HTC_ROOT)/system/etc/bluetooth/input.conf:system/etc/bluetooth/input.conf \
     $(HTC_ROOT)/system/etc/bluetooth/iop_device_list.conf:system/etc/bluetooth/iop_device_list.conf \
     $(HTC_ROOT)/system/etc/bluetooth/main.conf:system/etc/bluetooth/main.conf \
-    $(HTC_ROOT)/system/etc/bluetooth/network.conf:system/etc/bluetooth/network.conf 
+    $(HTC_ROOT)/system/etc/bluetooth/network.conf:system/etc/bluetooth/network.conf \
+    $(HTC_ROOT)/system/etc/AlarmGroupQueueList.xml:system/etc/AlarmGroupQueueList.xml \
+    $(HTC_ROOT)/system/etc/apns-conf.xml:system/etc/apns-conf.xml \
+    $(HTC_ROOT)/system/etc/EpsAlarmQueuingList.xml:system/etc/EpsAlarmQueuingList.xml \
+    $(HTC_ROOT)/system/etc/fallback_fonts.xml:system/etc/fallback_fonts.xml \
+    $(HTC_ROOT)/system/etc/htc_fota_migrate.xml:system/etc/htc_fota_migrate.xml \
+    $(HTC_ROOT)/system/etc/media_codecs.xml:system/etc/media_codecs.xml \
+    $(HTC_ROOT)/system/etc/media_profiles.xml:system/etc/media_profiles.xml \
+    $(HTC_ROOT)/system/etc/mixer_paths.xml:system/etc/mixer_paths.xml \
+    $(HTC_ROOT)/system/etc/mixer_paths_auxpcm.xml:system/etc/mixer_paths_auxpcm.xml \
+    $(HTC_ROOT)/system/etc/nfcee_access.xml:system/etc/nfcee_access.xml \
+    $(HTC_ROOT)/system/etc/OperatorPolicy.xml:system/etc/OperatorPolicy.xml \
+    $(HTC_ROOT)/system/etc/pnp.xml:system/etc/pnp.xml \
+    $(HTC_ROOT)/system/etc/spn-conf.xml:system/etc/spn-conf.xml \
+    $(HTC_ROOT)/system/etc/system_fonts.xml:system/etc/system_fonts.xml \
+    $(HTC_ROOT)/system/etc/UserPolicy.xml:system/etc/UserPolicy.xml \
+    $(HTC_ROOT)/system/etc/voicemail-conf.xml:system/etc/voicemail-conf.xml \
+    $(HTC_ROOT)/system/etc/wifioffloadpkg.xml:system/etc/wifioffloadpkg.xml
 
  
 # Copy extra files
@@ -173,32 +189,11 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
     frameworks/native/data/etc/tablet_core_hardware.xml:system/etc/permissions/tablet_core_hardware.xml \
-    frameworks/native/data/etc/wearable_core_hardware.xml:system/etc/permissions/wearable_core_hardware.xml
-
-
-PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/wearable_core_hardware.xml:system/etc/permissions/wearable_core_hardware.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml
-    $(HTC_ROOT)/system/etc/AlarmGroupQueueList.xml:system/etc/AlarmGroupQueueList.xml \
-    $(HTC_ROOT)/system/etc/apns-conf.xml:system/etc/apns-conf.xml \
-    $(HTC_ROOT)/system/etc/EpsAlarmQueuingList.xml:system/etc/EpsAlarmQueuingList.xml \
-    $(HTC_ROOT)/system/etc/fallback_fonts.xml:system/etc/fallback_fonts.xml \
-    $(HTC_ROOT)/system/etc/htc_fota_migrate.xml:system/etc/htc_fota_migrate.xml \
-    $(HTC_ROOT)/system/etc/media_codecs.xml:system/etc/media_codecs.xml \
-    $(HTC_ROOT)/system/etc/media_profiles.xml:system/etc/media_profiles.xml \
-    $(HTC_ROOT)/system/etc/mixer_paths.xml:system/etc/mixer_paths.xml \
-    $(HTC_ROOT)/system/etc/mixer_paths_auxpcm.xml:system/etc/mixer_paths_auxpcm.xml \
-    $(HTC_ROOT)/system/etc/nfcee_access.xml:system/etc/nfcee_access.xml \
-    $(HTC_ROOT)/system/etc/OperatorPolicy.xml:system/etc/OperatorPolicy.xml \
-    $(HTC_ROOT)/system/etc/pnp.xml:system/etc/pnp.xml \
-    $(HTC_ROOT)/system/etc/spn-conf.xml:system/etc/spn-conf.xml \
-    $(HTC_ROOT)/system/etc/system_fonts.xml:system/etc/system_fonts.xml \
-    $(HTC_ROOT)/system/etc/UserPolicy.xml:system/etc/UserPolicy.xml \
-    $(HTC_ROOT)/system/etc/voicemail-conf.xml:system/etc/voicemail-conf.xml \
-    $(HTC_ROOT)/system/etc/wifioffloadpkg.xml:system/etc/wifioffloadpkg.xml 
-
-
+ 
 $(call inherit-product, vendor/htc/a11/a11-vendor.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
